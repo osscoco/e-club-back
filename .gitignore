@@ -1,0 +1,54 @@
+# ===== .NET build artefacts (tous projets) =====
+**/bin/
+**/obj/
+**/out/
+**/artifacts/
+**/TestResults/
+**/*.log
+
+# ===== IDE / outils =====
+**/.vs/
+**/.vscode/
+**/.idea/
+**/*.suo
+**/*.user
+**/*.rsuser
+**/*.userprefs
+**/*.sln.docstates
+
+# ===== Packages / NuGets locaux =====
+**/*.nupkg
+**/packages/
+
+# ===== Secrets & env =====
+**/.env
+**/.env.*
+**/.envrc
+**/script-healthcheck-users-grants.sql
+**/secrets.json
+**/*.pfx
+**/*.snk
+**/*.key
+**/*.cer
+
+# ===== Fichiers de publish/profils =====
+**/*.pubxml
+**/*.publishproj
+**/*.azurePubxml
+
+# ===== OS =====
+**/.DS_Store
+**/Thumbs.db
+
+# ===== Configs applicatives =====
+# On ignore tous les appsettings par défaut (car tu as des secrets dedans).
+# On versionnera uniquement des *templates* (cf. juste après).
+**/appsettings.json
+**/appsettings.*.json
+
+# (Optionnel) si tu veux ne PAS versionner les profils de lancement
+**/Properties/launchSettings.json
+
+# ===== Migrations =====
+**/Migrations/*.cs
+**/Migrations/AppDbContextModelSnapshot.cs
