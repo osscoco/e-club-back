@@ -27,7 +27,7 @@ namespace E_Club.Repositories.Users
         #region GetUsers
         public async Task<IEnumerable<UserDtoResponse?>> GetUsers(CancellationToken cancellationToken)
         {
-            return await _context.Users.AsNoTracking().OrderBy(c => c.LastName).ProjectTo<UserDtoResponse>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
+            return await _context.Users.AsNoTracking().Include(u => u.Club).Include(u => u.UserType).OrderBy(c => c.LastName).ProjectTo<UserDtoResponse>(_mapper.ConfigurationProvider).ToListAsync(cancellationToken);
         }
         #endregion
 
