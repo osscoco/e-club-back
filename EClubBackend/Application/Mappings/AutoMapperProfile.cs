@@ -5,6 +5,7 @@ using E_Club.Application.DTOs.Clubs.Response;
 using E_Club.Application.DTOs.User.Response;
 using E_Club.Application.DTOs.Users.Request;
 using DomainModels.Entities;
+using E_Club.Application.DTOs.UserTypes.Response;
 
 namespace E_Club.Application.Mappings
 {
@@ -19,6 +20,9 @@ namespace E_Club.Application.Mappings
             // Auth
             CreateMap<User, LoginDtoResponse>();
             CreateMap<User, AuthMeDtoResponse>();
+
+            // UserType
+            CreateMap<UserType, UserTypeDtoResponse>();
 
             // User
             CreateMap<User, UserDtoResponse>();
